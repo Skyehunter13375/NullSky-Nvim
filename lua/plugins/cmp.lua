@@ -39,8 +39,8 @@ return {
                 sources = {{ name = "nvim_lsp" }},
 
                 experimental = {
-                ghost_text = true, -- faint preview inline
-                },
+                    ghost_text = true, -- faint preview inline
+                }
             })
 
             -- ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫ Attach N Run ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫ --
@@ -53,7 +53,7 @@ return {
                             client.server_capabilities =
                             vim.tbl_deep_extend("force", client.server_capabilities, capabilities)
                         end
-                    end,
+                    end
                 }
             )
         end

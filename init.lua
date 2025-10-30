@@ -42,3 +42,6 @@ vim.keymap.set('n', '<leader>sg', builtin.live_grep,                     { desc 
 vim.keymap.set('n', '<leader>fs', ':Neotree filesystem reveal left<CR>', { desc = 'Show/Hide Neotree' })
 vim.keymap.set('n', '<leader>qq', ':q!<CR>',                             { desc = "Quit without saving" })
 vim.keymap.set('n', '<leader>wq', ':wq!<CR>',                            { desc = "Save and Quite" })
+vim.keymap.set('n', '<leader>sn', function()
+    builtin.find_files { cwd = vim.fn.stdpath 'config' }
+end, { desc = "Seach NeoVim config files" })
