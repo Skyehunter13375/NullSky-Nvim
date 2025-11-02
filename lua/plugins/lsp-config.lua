@@ -7,7 +7,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup {
-        ensure_installed = { "gopls", "intelephense", "lua_ls" },
+        ensure_installed = { "bashls", "gopls", "intelephense", "lua_ls" },
         automatic_installation = true,
       }
 
@@ -51,6 +51,19 @@ return {
                 completion = { callSnippet = "Replace" },
               },
             },
+            bufnr = args.buf,
+          })
+        end,
+      })
+
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = { "sh", "bash" },
+        callback = function(args)
+          vim.lsp.start({
+            name = "bashls",
+            cmd = { "bash-language-server", "start" },
+            root_dir = vim.fs.dirname(vim.fs.find({ ".git", ".bashrc" }, { upward = true })[1]),
+            capabilities = vim.lsp.protocol.make_client_capabilities(),
             bufnr = args.buf,
           })
         end,
