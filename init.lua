@@ -1,7 +1,7 @@
 -- ┣━━━━━━━━━━━━━━━━━━━━━━┫ Setting My Preferred Defaults ┣━━━━━━━━━━━━━━━━━━━━━━━┫ --
 vim.g.mapleader      = ' '      -- Set leader key to space [MUST be done before loading lazy.nvim]
 vim.g.maplocalleader = ' '      -- Set leader key to space [MUST be done before loading lazy.nvim]
-vim.cmd.colorscheme  "retrobox" -- Set default colorscheme
+vim.cmd.colorscheme  "slate" -- Set default colorscheme
 vim.o.mouse          = ''       -- Empty string here disables mouse mode entirely
 vim.opt.tabstop      = 4        -- Number of visual spaces per TAB
 vim.opt.shiftwidth   = 4        -- Number of spaces to use for each step of (auto)indent

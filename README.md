@@ -18,11 +18,11 @@ If you are looking for a well-built and easy to use neovim config I would sugges
 - nvim-web-devicons
 - plenary.nvim
 - telescope.nvim
-
+- render-markdown.nvim
 
 # Basic keybinds:
 ```
-<Esc>  + <Esc>   --  Exit terminal mode
+<Esc> + <Esc>    --  Exit terminal mode
 <CTRL> + h       -- Shift focus to the left window 
 <CTRL> + j       -- Shift focus to the lower window
 <CTRL> + k       -- Shift focus to the upper window
