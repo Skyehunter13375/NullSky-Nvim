@@ -2,7 +2,7 @@
 vim.g.mapleader      = ' '      -- Set leader key to space [MUST be done before loading lazy.nvim]
 vim.g.maplocalleader = ' '      -- Set leader key to space [MUST be done before loading lazy.nvim]
 vim.cmd.colorscheme  "slate" -- Set default colorscheme
-vim.o.mouse          = ''       -- Empty string here disables mouse mode entirely
+vim.o.mouse          = 'a'       -- Empty string here disables mouse mode entirely
 vim.opt.tabstop      = 4        -- Number of visual spaces per TAB
 vim.opt.shiftwidth   = 4        -- Number of spaces to use for each step of (auto)indent
 vim.opt.expandtab    = true     -- Use spaces instead of TAB characters
@@ -14,6 +14,7 @@ vim.o.splitright     = true     -- Configure how new splits should be opened
 vim.o.splitbelow     = true     -- Configure how new splits should be opened
 vim.o.list           = true     -- Configure whitespace characters
 vim.opt.listchars    = { tab = '» ', trail = '·', nbsp = '␣' } -- Configure whitespace characters
+vim.opt.conceallevel = 2
 
 
 -- ┣━━━━━━━━━━━━━━━━━━━━━┫ Sync Clipboard Between OS & Nvim ┣━━━━━━━━━━━━━━━━━━━━━┫ --
