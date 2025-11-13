@@ -1,10 +1,10 @@
 -- ┣━━━━━━━━━━━━━━━━━━━━━━┫ Setting My Preferred Defaults ┣━━━━━━━━━━━━━━━━━━━━━━━┫ --
 vim.g.mapleader      = ' '      -- Set leader key to space [MUST be done before loading lazy.nvim]
 vim.g.maplocalleader = ' '      -- Set leader key to space [MUST be done before loading lazy.nvim]
-vim.cmd.colorscheme  "slate" -- Set default colorscheme
-vim.o.mouse          = 'a'       -- Empty string here disables mouse mode entirely
+vim.o.mouse          = 'a'      -- Empty string here disables mouse mode entirely
 vim.opt.tabstop      = 4        -- Number of visual spaces per TAB
 vim.opt.shiftwidth   = 4        -- Number of spaces to use for each step of (auto)indent
+vim.opt.swapfile     = false    -- Stop nvim from creating .swp files all over the place.
 vim.opt.expandtab    = true     -- Use spaces instead of TAB characters
 vim.g.have_nerd_font = true     -- Only if you really have a nerd font installed
 vim.o.undofile       = true     -- Save undo history <C-r> is the default to redo
@@ -41,8 +41,6 @@ vim.keymap.set('n', '<C-k>',      '<C-w><C-k>',                          { desc 
 vim.keymap.set('n', '<leader>sf', builtin.find_files,                    { desc = 'Treesitter Fuzzyfind Files' })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep,                     { desc = 'Treesitter Fuzzyfind Grep'})
 vim.keymap.set('n', '<leader>fs', ':Neotree filesystem reveal left<CR>', { desc = 'Show/Hide Neotree' })
-vim.keymap.set('n', '<leader>qq', ':q!<CR>',                             { desc = "Quit without saving" })
-vim.keymap.set('n', '<leader>wq', ':wq!<CR>',                            { desc = "Save and Quite" })
-vim.keymap.set('n', '<leader>sn', function()
-    builtin.find_files { cwd = vim.fn.stdpath 'config' }
-end, { desc = "Seach NeoVim config files" })
+vim.keymap.set('n', '<leader>q',  ':q!<CR>',                             { desc = "Quit without saving" })
+vim.keymap.set('n', '<leader>w',  ':w!<CR>',                             { desc = "Save and Quite" })
+vim.keymap.set('n', '<leader>sn', function() builtin.find_files { cwd = vim.fn.stdpath 'config' } end, { desc = "Seach NeoVim config files" })

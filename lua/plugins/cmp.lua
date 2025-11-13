@@ -17,13 +17,13 @@ return {
             -- ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫ Setup ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫ --
             cmp.setup({
                 window = {
-                completion = cmp.config.window.bordered({
-                    border = "rounded",
+                completion       = cmp.config.window.bordered({
+                    border       = "rounded",
                     winhighlight = "Normal:CmpNormal,FloatBorder:CmpBorder,CursorLine:PmenuSel,Search:None",
-                    scrolloff = 0,
+                    scrolloff    = 0,
                     side_padding = 0,
-                    col_offset = 75,
-                    scrollbar = true,
+                    col_offset   = 75,
+                    scrollbar    = true,
                 }),
                 documentation = cmp.config.window.bordered({
                     border = "rounded",
